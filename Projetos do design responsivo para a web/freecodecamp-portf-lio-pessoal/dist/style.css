@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: sans-serif;
+}
+a {
+  text-decoration: none;
+}
+#navbar {
+  background-color: #3a5f99;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+ul {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+ul li a {
+  margin-right: 15px;
+  color: white;
+}
+a:hover {
+  text-decoration: underline;
+}
+#welcome-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(215, 215, 215, 1) 75%
+  );
+}
+#welcome-section h1 {
+  font-size: 50px;
+  text-align: center;
+}
+#welcome-section h4 {
+  font-size: 20px;
+  color: #666;
+}
+#projects {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(59, 59, 59, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  color: orange;
+  padding: 50px;
+  text-align: center;
+}
+#projects h2 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#projects a {
+  color: white;
+}
+.project-tile {
+  padding: 20px;
+}
+figcaption {
+  font-weight: bolder;
+  text-align: center;
+}
+#profile-link {
+  justify-content: center;
+  font-weight: bolder;
+}
+#contact {
+  background-color: black;
+  color: white;
+  padding: 50px;
+}
+#contact div {
+  margin-top: 20px;
+}
+#contact a {
+  margin-right: 10px;
+  color: orange;
+}
+i {
+  margin-right: 5px;
+}
+footer {
+  background: rgb(39, 64, 97);
+  background: linear-gradient(
+    180deg,
+    rgba(39, 64, 97, 1) 0%,
+    rgba(1, 15, 29, 1) 75%
+  );
+  padding: 30px 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+footer a {
+  color: orange;
+}
+@media (max-width: 600px) {
+  #contact {
+    display: flex;
+    flex-direction: column;
+  }
+  #contact div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #contact div span {
+    margin-bottom: 10px;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+}

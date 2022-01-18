@@ -1,0 +1,197 @@
+* {
+  font-family: montserat, sans-serif;
+}
+h1 {
+  font-size: 26px;
+  font-weight: bolder;
+}
+h3 {
+  font-size: 20px;
+  font-weight: bolder;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw;
+  width: 100%;
+  background-color: #f0f0f0;
+  position: fixed;
+}
+#header-img {
+  max-width: 300px;
+}
+#nav-bar ul {
+  display: flex;
+  list-style: none;
+}
+#nav-bar ul li {
+  margin-right: 4vw;
+}
+#nav-bar ul li a {
+  color: black;
+  text-decoration: none;
+}
+#nav-bar ul li a:hover {
+  text-decoration: underline;
+}
+#banner {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#banner h1 {
+  text-align: center;
+}
+#banner form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+#banner form input[type="email"] {
+  border: solid 1px black;
+  padding: 5px;
+  width: 300px;
+}
+#banner form input[type="submit"] {
+  margin-top: 10px;
+  background-color: #edd500;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 900;
+}
+#features {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#features div {
+  max-width: 55vw;
+  display: flex;
+  padding: 30px 0;
+}
+#features div i {
+  margin-right: 100px;
+  color: #fcb900;
+  width: 20px;
+}
+#howitworks {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+}
+#howitworks iframe {
+  width: 560px;
+  height: 315px;
+}
+#pricing {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5% 10%;
+}
+#pricing div {
+  border: solid 1px #000;
+  width: 22vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#pricing div h5 {
+  background-color: #eee;
+  width: 90%;
+  padding: 5%;
+  text-align: center;
+  font-weight: bolder;
+}
+#pricing div p {
+  font-size: 26px;
+  font-weight: bold;
+}
+#pricing div ul {
+  text-align: center;
+}
+#pricing div ul li {
+  margin-bottom: 10px;
+}
+#pricing div button {
+  margin-bottom: 10px;
+  background-color: #edd500;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+footer {
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 2vw;
+}
+footer nav ul {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+footer ul li {
+  margin-right: 1vw;
+}
+footer ul li a {
+  text-decoration: none;
+  color: black;
+}
+footer span {
+  color: #888;
+}
+
+@media (max-width: 600px) {
+  #header-img {
+    margin-top: 10px;
+    max-width: 250px;
+  }
+  #header {
+    flex-direction: column;
+  }
+  #header nav ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-direction: column;
+    text-align: center;
+  }
+  #header nav ul li {
+    margin-bottom: 5px;
+  }
+  #banner {
+    padding-top: 150px;
+  }
+  #features div span {
+    text-align: center;
+  }
+  #features div i {
+    display: none;
+  }
+  #howitworks iframe {
+    width: 100%;
+  }
+  #pricing {
+    flex-direction: column;
+  }
+  #pricing div {
+    width: 70vw;
+    height: 50vh;
+    margin-bottom: 30px;
+  }
+}
