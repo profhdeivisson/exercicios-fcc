@@ -32,8 +32,6 @@ def add_time(horario_inicial, duracao, diaDaSemana=""):
     if(len(str(horario_final).split()) == 1):
         horaDividida = str(horario_final).split(":")
         qtdDias = horaDividida[0].split()
-        for dia in range(int(qtdDias[0])):
-            DAYS.append(DAYS[dia])
         horaFormatada = time(hour=int(horaDividida[0]), minute=int(horaDividida[1])).strftime("%I:%M %p")
         if(int(horaFormatada[0:2]) < 10):
             horaFormatada = horaFormatada[1:]
@@ -49,26 +47,24 @@ def add_time(horario_inicial, duracao, diaDaSemana=""):
         if(horaDividida[0] == '1 day'):
             if(diaDaSemana != ""):
                 qtdDias = horaDividida[0].split()
-                for dia in range(int(qtdDias[0])):
-                    DAYS.append(DAYS[dia])
-                return horaFormatada[0:] + ", " + DAYS[DAYS.index(diaDaSemana.title()) + int(qtdDias[0])] + " (next day)"
+                diaAposContagem = DAYS[(int(qtdDias[0]) + DAYS.index(diaDaSemana))%7]
+                return horaFormatada[0:] + ", " + diaAposContagem + " (next day)"
             else:
                 return horaFormatada[0:] + " (next day)"
         elif(int(horaDividida[0][0]) > 1):
             qtdDias = horaDividida[0].split()
-            for dia in range(int(qtdDias[0])):
-                DAYS.append(DAYS[dia])
             if(diaDaSemana != ""):
-                return horaFormatada[0:]+", " + DAYS[DAYS.index(diaDaSemana.title()) + int(qtdDias[0])] + " (" + qtdDias[0] + " days later)"
+                diaAposContagem = DAYS[(int(qtdDias[0]) + DAYS.index(diaDaSemana.title()))%7]
+                return horaFormatada[0:]+", " + diaAposContagem + " (" + qtdDias[0] + " days later)"
             else:
                 return horaFormatada[0:]+" (" + qtdDias[0] + " days later)"
 
 print(add_time("8:16 PM", "466:02"))
 print(add_time("11:35 PM", "1:32"))
-print(add_time("3:00 PM", "3:10"))
+print(add_time("3:00 PM", "3:10", "Monday"))
 # Returns: 6:10 PM
 
-print(add_time("11:30 AM", "2:32", "Monday"))
+print(add_time("11:30 PM", "2:32", "Monday"))
 # Returns: 2:02 PM, Monday
 
 print(add_time("11:43 AM", "00:20"))
